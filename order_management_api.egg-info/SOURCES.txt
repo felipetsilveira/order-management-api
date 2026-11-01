@@ -1,0 +1,17 @@
+pyproject.toml
+app/__init__.py
+app/dependencies.py
+app/main.py
+app/repositories/__init__.py
+app/repositories/product_repository.py
+app/routers/__init__.py
+app/routers/products.py
+app/schemas/__init__.py
+app/schemas/product.py
+app/services/__init__.py
+app/services/product_service.py
+order_management_api.egg-info/PKG-INFO
+order_management_api.egg-info/SOURCES.txt
+order_management_api.egg-info/dependency_links.txt
+order_management_api.egg-info/requires.txt
+order_management_api.egg-info/top_level.txt
