@@ -57,3 +57,22 @@ def list_products(
     ],
 ):
     return "Deu certo"
+
+@router.get(
+    "/{product_id}",
+    response_model=ProductResponseSchema,
+)
+def get_product(
+    product_id: int,
+    service: Annotated[
+        ProductService,
+        Depends(get_product_service),
+    ],
+):
+    product = service.get_product_by_id(product_id)
+    if not product:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Product not found",
+        )
+    return product

@@ -33,3 +33,9 @@ class ProductService:
             )
 
         return self.repository.create(data)
+
+    def get_product_by_id(
+        self,
+        product_id: int,
+    ) -> ProductResponseSchema | None:
+        return self.repository.find_by_id(product_id)

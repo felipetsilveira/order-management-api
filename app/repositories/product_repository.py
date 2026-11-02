@@ -19,6 +19,17 @@ class ProductRepository:
 
         return None
 
+
+    def find_by_id(
+        self,
+        product_id: int,
+    ) -> ProductResponseSchema | None:
+        for product in self.products:
+            if product.id == product_id:
+                return product
+
+        return None
+
     def create(
         self,
         data: CreateProductSchema,
